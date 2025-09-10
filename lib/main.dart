@@ -15,6 +15,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        textTheme: TextTheme(
+          // 在這裡設定會套用到全部的 titleLarge
+          titleLarge: TextStyle(
+            fontSize: 28,
+            fontWeight: FontWeight.bold,
+            color: Colors.green[400],
+          ),
+        ),
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.indigoAccent),
       ),
       home: const RootScreen(),

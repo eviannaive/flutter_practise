@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:test/views/list_screen.dart';
 
 class GridScreen extends StatelessWidget {
   const GridScreen({super.key});
@@ -11,7 +9,7 @@ class GridScreen extends StatelessWidget {
       appBar: AppBar(title: Text('Grid Screen')),
 
       body: GridView.builder(
-        physics: NeverScrollableScrollPhysics(), //禁止捲動
+        // physics: NeverScrollableScrollPhysics(), //禁止捲動
         itemCount: 40,
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 3,

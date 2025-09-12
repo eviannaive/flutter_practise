@@ -134,56 +134,60 @@ class _CurveAndClippersScreenState extends State<CurveAndClippersScreen>
 
     return Scaffold(
       body: SafeArea(
-        child: AnimatedBuilder(
-          animation: _counterClockwiseRotationController,
-          builder: (context, child) {
-            return Transform(
-              alignment: Alignment.center,
-              transform: Matrix4.identity()
-                ..rotateZ(_counterClockwiseRotationAnimation.value),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AnimatedBuilder(
-                    animation: _flipController,
-                    builder: (context, child) {
-                      return Transform(
-                        alignment: Alignment.centerRight,
-                        transform: Matrix4.identity()
-                          ..rotateY(_flipAnimation.value),
-                        child: ClipPath(
-                          clipper: HalfCircleClipper(side: CircleSide.left),
-                          child: Container(
-                            width: 100,
-                            height: 100,
-                            color: Colors.yellow,
+        child: Container(
+          alignment: Alignment.center,
+          decoration: BoxDecoration(color: Colors.black),
+          child: AnimatedBuilder(
+            animation: _counterClockwiseRotationController,
+            builder: (context, child) {
+              return Transform(
+                alignment: Alignment.center,
+                transform: Matrix4.identity()
+                  ..rotateZ(_counterClockwiseRotationAnimation.value),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    AnimatedBuilder(
+                      animation: _flipController,
+                      builder: (context, child) {
+                        return Transform(
+                          alignment: Alignment.centerRight,
+                          transform: Matrix4.identity()
+                            ..rotateY(_flipAnimation.value),
+                          child: ClipPath(
+                            clipper: HalfCircleClipper(side: CircleSide.left),
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.yellow,
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                  ),
-                  AnimatedBuilder(
-                    animation: _flipAnimation,
-                    builder: (context, child) {
-                      return Transform(
-                        alignment: Alignment.centerLeft,
-                        transform: Matrix4.identity()
-                          ..rotateY(_flipAnimation.value),
-                        child: ClipPath(
-                          clipper: HalfCircleClipper(side: CircleSide.right),
-                          child: Container(
-                            width: 100,
-                            height: 100,
-                            color: Colors.blue,
+                        );
+                      },
+                    ),
+                    AnimatedBuilder(
+                      animation: _flipAnimation,
+                      builder: (context, child) {
+                        return Transform(
+                          alignment: Alignment.centerLeft,
+                          transform: Matrix4.identity()
+                            ..rotateY(_flipAnimation.value),
+                          child: ClipPath(
+                            clipper: HalfCircleClipper(side: CircleSide.right),
+                            child: Container(
+                              width: 100,
+                              height: 100,
+                              color: Colors.blue,
+                            ),
                           ),
-                        ),
-                      );
-                    },
-                  ),
-                ],
-              ),
-            );
-          },
+                        );
+                      },
+                    ),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
       ),
     );

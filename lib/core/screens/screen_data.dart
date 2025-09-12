@@ -3,10 +3,12 @@ import 'package:test/core/screens/screen_item.dart';
 import 'package:test/views/base_rotate_screen.dart';
 import 'package:test/views/curve_and_clippers_screen.dart';
 import 'package:test/views/animations_screen.dart';
+import 'package:test/views/dialog_screen.dart';
 import 'package:test/views/gesture_screen.dart';
 import 'package:test/views/grid_screen.dart';
 import 'package:test/views/image_screen.dart';
 import 'package:test/views/list_screen.dart';
+import 'package:test/views/media_query_screen.dart';
 import 'package:test/views/sliver_screen.dart';
 import 'package:test/views/tap_to_animate.dart';
 import 'package:test/views/tapbar_screen.dart';
@@ -46,6 +48,11 @@ final List<ScreenItem> rawScreens = [
         icon: Icons.tab,
         screen: TapBarScreen(),
       ),
+      ScreenItem(
+        label: 'Dialog Screen',
+        icon: Icons.tab,
+        screen: DialogScreen(),
+      ),
     ],
   ),
   ScreenItem(
@@ -70,6 +77,12 @@ final List<ScreenItem> rawScreens = [
         screen: CurveAndClippersScreen(),
       ),
     ],
+  ),
+  ScreenItem(
+    label: 'Media Query',
+    icon: Icons.screen_rotation,
+    screen: MediaQueryScreen(),
+    showInBottomNav: true,
   ),
 ];
 

@@ -71,7 +71,7 @@ class _RootScreenState extends State<RootScreen> {
             },
           ),
         ),
-        title: Text('Test App'),
+        title: Text(_selectedNode.label),
         backgroundColor: theme.colorScheme.primaryContainer,
       ),
       endDrawer: Drawer(

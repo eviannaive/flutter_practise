@@ -12,6 +12,8 @@ import 'package:test/views/media_query_screen.dart';
 import 'package:test/views/sliver_screen.dart';
 import 'package:test/views/tap_to_animate.dart';
 import 'package:test/views/tapbar_screen.dart';
+import 'package:test/views/text_screen.dart';
+import 'package:test/views/timer_screen.dart';
 import 'package:test/views/widgets_screen.dart';
 
 /// 原始定義（不需要 key）
@@ -52,6 +54,12 @@ final List<ScreenItem> rawScreens = [
         label: 'Dialog Screen',
         icon: Icons.tab,
         screen: DialogScreen(),
+      ),
+      ScreenItem(label: 'Text Screen', icon: Icons.tab, screen: TextScreen()),
+      ScreenItem(
+        label: 'Timer Screen',
+        icon: Icons.timer,
+        screen: TimerScreen(),
       ),
     ],
   ),

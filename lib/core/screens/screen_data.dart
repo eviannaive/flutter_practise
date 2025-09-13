@@ -7,9 +7,12 @@ import 'package:test/views/dialog_screen.dart';
 import 'package:test/views/gesture_screen.dart';
 import 'package:test/views/grid_screen.dart';
 import 'package:test/views/image_screen.dart';
+import 'package:test/views/input_screen.dart';
 import 'package:test/views/list_screen.dart';
 import 'package:test/views/media_query_screen.dart';
+import 'package:test/views/pageview_screen.dart';
 import 'package:test/views/sliver_screen.dart';
+import 'package:test/views/stack_widgets_screen.dart';
 import 'package:test/views/tap_to_animate.dart';
 import 'package:test/views/tapbar_screen.dart';
 import 'package:test/views/text_screen.dart';
@@ -52,15 +55,30 @@ final List<ScreenItem> rawScreens = [
       ),
       ScreenItem(
         label: 'Dialog Screen',
-        icon: Icons.tab,
+        icon: Icons.bus_alert,
         screen: DialogScreen(),
       ),
-      ScreenItem(label: 'Text Screen', icon: Icons.tab, screen: TextScreen()),
+      ScreenItem(
+        label: 'Text Screen',
+        icon: Icons.text_fields,
+        screen: TextScreen(),
+      ),
       ScreenItem(
         label: 'Timer Screen',
         icon: Icons.timer,
         screen: TimerScreen(),
       ),
+      ScreenItem(
+        label: 'PageView Screen',
+        icon: Icons.pages,
+        screen: PageviewScreen(),
+      ),
+      ScreenItem(
+        label: 'Stack Widget',
+        icon: Icons.panorama_wide_angle,
+        screen: StackWidgetsScreen(),
+      ),
+      ScreenItem(label: 'Input', icon: Icons.input, screen: InputScreen()),
     ],
   ),
   ScreenItem(

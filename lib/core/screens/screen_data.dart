@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:test/core/screens/screen_item.dart';
+import 'package:test/views/animated_icons_screen.dart';
 import 'package:test/views/base_rotate_screen.dart';
 import 'package:test/views/curve_and_clippers_screen.dart';
 import 'package:test/views/animations_screen.dart';
@@ -101,6 +102,11 @@ final List<ScreenItem> rawScreens = [
         label: 'Curve And Clippers',
         icon: Icons.movie_filter,
         screen: CurveAndClippersScreen(),
+      ),
+      ScreenItem(
+        label: 'Animated Icons',
+        icon: Icons.notifications_off,
+        screen: AnimatedIconsScreen(),
       ),
     ],
   ),

@@ -4,6 +4,7 @@ import 'package:test/views/animated_icons_screen.dart';
 import 'package:test/views/base_rotate_screen.dart';
 import 'package:test/views/curve_and_clippers_screen.dart';
 import 'package:test/views/animations_screen.dart';
+import 'package:test/views/date_picker_screen.dart';
 import 'package:test/views/dialog_screen.dart';
 import 'package:test/views/gesture_screen.dart';
 import 'package:test/views/grid_screen.dart';
@@ -12,6 +13,7 @@ import 'package:test/views/input_screen.dart';
 import 'package:test/views/list_screen.dart';
 import 'package:test/views/media_query_screen.dart';
 import 'package:test/views/pageview_screen.dart';
+import 'package:test/views/slider_screen.dart';
 import 'package:test/views/sliver_screen.dart';
 import 'package:test/views/stack_widgets_screen.dart';
 import 'package:test/views/tap_to_animate.dart';
@@ -80,6 +82,16 @@ final List<ScreenItem> rawScreens = [
         screen: StackWidgetsScreen(),
       ),
       ScreenItem(label: 'Input', icon: Icons.input, screen: InputScreen()),
+      ScreenItem(
+        label: 'Slider',
+        icon: Icons.slideshow,
+        screen: SliderScreen(),
+      ),
+      ScreenItem(
+        label: 'Date Picker',
+        icon: Icons.date_range,
+        screen: DatePickerScreen(),
+      ),
     ],
   ),
   ScreenItem(

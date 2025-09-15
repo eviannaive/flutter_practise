@@ -27,9 +27,17 @@ class _DatePickerScreenState extends State<DatePickerScreen> {
   }
 
   void _showTimePicker() {
-    showTimePicker(context: context, initialTime: TimeOfDay.now()).then((
-      value,
-    ) {
+    showTimePicker(
+      context: context,
+      initialTime: TimeOfDay.now(),
+      initialEntryMode: TimePickerEntryMode.inputOnly,
+      builder: (BuildContext context, Widget? child) {
+        return MediaQuery(
+          data: MediaQuery.of(context).copyWith(alwaysUse24HourFormat: true),
+          child: child!,
+        );
+      },
+    ).then((value) {
       setState(() {
         if (value != null) {
           _timeOfDay = value!;

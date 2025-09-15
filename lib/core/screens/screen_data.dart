@@ -20,6 +20,7 @@ import 'package:test/views/tap_to_animate.dart';
 import 'package:test/views/tapbar_screen.dart';
 import 'package:test/views/text_screen.dart';
 import 'package:test/views/timer_screen.dart';
+import 'package:test/views/wheel_scroll_screen.dart';
 import 'package:test/views/widgets_screen.dart';
 
 /// 原始定義（不需要 key）
@@ -91,6 +92,11 @@ final List<ScreenItem> rawScreens = [
         label: 'Date Picker',
         icon: Icons.date_range,
         screen: DatePickerScreen(),
+      ),
+      ScreenItem(
+        label: 'Wheel Scroll',
+        icon: Icons.date_range,
+        screen: WheelScrollScreen(),
       ),
     ],
   ),

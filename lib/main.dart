@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:test/views/animations_screen.dart';
+import 'package:test/views/media_query_screen.dart';
+import 'package:test/views/packages_screen.dart';
 import 'package:test/views/root_screen.dart';
+import 'package:test/views/widgets_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -28,13 +32,10 @@ class MyApp extends StatelessWidget {
       home: const RootScreen(),
       initialRoute: '/',
       routes: {
-        // '/list': (context) => const ListScreen(),
-        // '/image': (context) => const ImageScreen(),
-        // '/sliver': (context) => const SliverScreen(),
-        // '/topbar': (context) => const TapBarScreen(),
-        // '/animate': (context) => const AnimatedScreen(),
-        // '/animation': (context) => const AnimationScreen(),
-        // '/animation2': (context) => const Animation2Screen(),
+        '/widgets': (context) => const WidgetsScreen(),
+        '/animations': (context) => const AnimationsScreen(),
+        '/media_query': (context) => const MediaQueryScreen(),
+        '/pakages': (context) => const PackagesScreen(),
       },
     );
   }

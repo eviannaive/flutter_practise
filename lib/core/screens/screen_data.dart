@@ -6,13 +6,17 @@ import 'package:test/views/curve_and_clippers_screen.dart';
 import 'package:test/views/animations_screen.dart';
 import 'package:test/views/date_picker_screen.dart';
 import 'package:test/views/dialog_screen.dart';
+import 'package:test/views/drag_and_drop_screen.dart';
 import 'package:test/views/gesture_screen.dart';
 import 'package:test/views/grid_screen.dart';
 import 'package:test/views/image_screen.dart';
 import 'package:test/views/input_screen.dart';
 import 'package:test/views/list_screen.dart';
 import 'package:test/views/media_query_screen.dart';
+import 'package:test/views/packages_screen.dart';
 import 'package:test/views/pageview_screen.dart';
+import 'package:test/views/slidable_widget_screen.dart';
+import 'package:test/views/slide_to_act_screen.dart';
 import 'package:test/views/slider_screen.dart';
 import 'package:test/views/sliver_screen.dart';
 import 'package:test/views/stack_widgets_screen.dart';
@@ -98,6 +102,11 @@ final List<ScreenItem> rawScreens = [
         icon: Icons.date_range,
         screen: WheelScrollScreen(),
       ),
+      ScreenItem(
+        label: 'Drag And Drop List',
+        icon: Icons.notifications_off,
+        screen: DragAndDropScreen(),
+      ),
     ],
   ),
   ScreenItem(
@@ -133,6 +142,24 @@ final List<ScreenItem> rawScreens = [
     icon: Icons.screen_rotation,
     screen: MediaQueryScreen(),
     showInBottomNav: true,
+  ),
+  ScreenItem(
+    label: 'Packages',
+    icon: Icons.backpack_sharp,
+    screen: PackagesScreen(),
+    showInBottomNav: true,
+    children: [
+      ScreenItem(
+        label: 'Slidable Widget',
+        icon: Icons.shape_line_rounded,
+        screen: SlidableWidgetScreen(),
+      ),
+      ScreenItem(
+        label: 'Slide To Act',
+        icon: Icons.shape_line_rounded,
+        screen: SlideToActScreen(),
+      ),
+    ],
   ),
 ];
 
